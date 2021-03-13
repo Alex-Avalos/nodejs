@@ -12,7 +12,9 @@ io.on('connection',function(socket){
 });
 
 app.get('/',(req,res,next)=>{
-    res.sendFile(__dirname+'/index.html');
+    res.sendFile(__dirname+'/bascula.html');
+    app.use('/assets', express.static(__dirname + '/assets'));
+    app.use('/images', express.static(__dirname + '/images'));
 });
 
 var serialport = require('serialport');
