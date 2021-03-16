@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/select2.css">
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
     <link href="assets/css/chartist.min.css" rel="stylesheet">
     <link href="assets/css/jqvmap.min.css" rel="stylesheet">
@@ -176,16 +177,21 @@
                     </div>
                   </div>
                 </div>
-                
-                
                 <div class="row form-group">
                   <div class="col col-md-6">
                     <label for="vat" class=" form-control-label">Tipo de Movimiento</label>
-                    <input type="text" placeholder=".col-md-6" class="form-control">
+                    <select class="select2 form-control" id="tipo_de_movimiento" style="width: 100%;" onchange="mov()">
+                      <option value="0" selected disabled>Seleccione</option>
+                      <option value="1">Entrada</option>
+                      <option value="2">Salida</option>
+                      <option value="3">Traspaso</option>
+                    </select>
                   </div>
                   <div class="col col-md-6">
-                    <label for="vat" class=" form-control-label">Concepto de Movimientos</label>
-                    <input type="text" placeholder=".col-md-6" class="form-control">
+                    <label for="vat" class="form-control-label">Concepto de Movimientos</label>
+                    <select class="select2 form-control" id="concepto_movimiento" style="width: 100%;">
+                      <option value="0" selected>Seleccione</option>
+                    </select>
                   </div>
                 </div>
                 <div class="row form-group">
@@ -238,6 +244,11 @@
                     <input type="text" placeholder="N° Económico" class="form-control">
                   </div>
                 </div>
+                <div>
+                  <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
+                    <span id="payment-button-amount">Guardar</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -273,7 +284,7 @@
       </div>
     </footer>
   </div>
-  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery_3_6_0.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap/bootstrap.min.js"></script>
   <script src="assets/js/jquery.matchHeight.min.js"></script>
@@ -281,5 +292,8 @@
   <script src="assets/js/jquery.flot.min.js"></script>
   <script src="assets/js/jquery.flot.pie.min.js"></script>
   <script src="assets/js/jquery.flot.spline.min.js"></script>
+  <script src="assets/js/select2/bascula.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/form-select2.min.js"></script>
 </body>
 </html>
