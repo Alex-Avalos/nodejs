@@ -189,7 +189,7 @@
                   </div>
                   <div class="col col-md-6">
                     <label for="vat" class="form-control-label">Concepto de Movimientos</label>
-                    <select class="select2 form-control" id="concepto_movimiento" style="width: 100%;">
+                    <select class="select2 form-control" id="concepto_movimiento" style="width: 100%;" onchange="con_mov()">
                       <option value="0" selected>Seleccione</option>
                     </select>
                   </div>
@@ -197,14 +197,16 @@
                 <div class="row form-group">
                   <div class="col col-md-6">
                     <label for="vat" class=" form-control-label">Tipo de Documento</label>
-                    <input type="text" placeholder=".col-md-6" class="form-control">
+                    <select class="select2 form-control" id="tipo_de_documento" style="width: 100%;">
+                      <option value="0" selected>Seleccione</option>
+                    </select>
                   </div>
-                  <div class="col col-md-6">
+                  <div class="col col-md-6" id="div_nom_document">
                     <label for="vat" class=" form-control-label">N° de Documento</label>
-                    <input type="text" placeholder=".col-md-6" class="form-control">
+                    <input type="text" placeholder="Documento" class="form-control">
                   </div>
                 </div>
-                <div class="row form-group">
+                <div class="row form-group" id="div_row_proveedor">
                   <div class="col col-md-4">
                     <label for="vat" class=" form-control-label">ID Proveedor</label>
                     <input type="text" placeholder="ID Proveedor" class="form-control">
@@ -214,7 +216,17 @@
                     <input type="text" placeholder="Nombre Proveedor" class="form-control">
                   </div>
                 </div>
-                <div class="row form-group">
+                <div class="row form-group" id="div_row_cliente">
+                  <div class="col col-md-4">
+                    <label for="vat" class=" form-control-label">ID Cliente</label>
+                    <input type="text" placeholder="ID Proveedor" class="form-control">
+                  </div>
+                  <div class="col col-md-8">
+                    <label for="vat" class=" form-control-label">Nombre del Cliente</label>
+                    <input type="text" placeholder="Nombre del Cliente" class="form-control">
+                  </div>
+                </div>
+                <div class="row form-group" id="div_row_peso_lugar_origen">
                   <div class="col col-md-4">
                     <label for="vat" class=" form-control-label">Peso Origen</label>
                     <input type="text" placeholder="Peso Origen" class="form-control">
@@ -224,7 +236,7 @@
                     <input type="text" placeholder="Lugar de Origen:" class="form-control">
                   </div>
                 </div>
-                <div class="row form-group">
+                <div class="row form-group" id="div_row_info_vehiculo">
                   <div class="col col-md-4">
                     <label for="vat" class=" form-control-label">N° Económico</label>
                     <input type="text" placeholder="N° Económico" class="form-control">
@@ -238,7 +250,7 @@
                     <input type="text" placeholder="Placas" class="form-control">
                   </div>
                 </div>
-                <div class="row form-group">
+                <div class="row form-group" id="div_row_nom_chofer">
                   <div class="col col-md-12">
                     <label for="vat" class=" form-control-label">Nombre del Chofer</label>
                     <input type="text" placeholder="N° Económico" class="form-control">
