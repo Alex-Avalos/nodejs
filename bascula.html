@@ -178,6 +178,17 @@
                   </div>
                 </div>
                 <div class="row form-group">
+                  <div class="col col-md-12">
+                    <label for="vat" class=" form-control-label">Empresa</label>
+                    <select class="select2 form-control" id="empresa" style="width: 100%;">
+                      <option value="0" selected disabled>Seleccione</option>
+                      <option value="1">Agropecuaria</option>
+                      <option value="2">Agroproductos</option>
+                      <option value="3">Agrotrigon</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row form-group">
                   <div class="col col-md-6">
                     <label for="vat" class=" form-control-label">Tipo de Movimiento</label>
                     <select class="select2 form-control" id="tipo_de_movimiento" style="width: 100%;" onchange="mov()">
@@ -203,13 +214,26 @@
                   </div>
                   <div class="col col-md-6" id="div_nom_document">
                     <label for="vat" class=" form-control-label">N° de Documento</label>
-                    <input type="text" placeholder="Documento" class="form-control">
+                    <div id="input_num_documento">
+                      <input type="text" placeholder="Documento" class="form-control">
+                    </div>
+                    <div id="select_num_documento">
+                      <select class="select2 form-control" id="tipo_de_documento" style="width: 100%;">
+                        <option value="0" selected>Seleccione</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <div class="row form-group" id="div_row_proveedor">
                   <div class="col col-md-4">
                     <label for="vat" class=" form-control-label">ID Proveedor</label>
-                    <input type="text" placeholder="ID Proveedor" class="form-control">
+                    <!--<input type="text" placeholder="ID Proveedor" class="form-control">-->
+                    <select class="select2 form-control" style="width: 100%;" id="id_proveedor">
+                      <option value="0" selected disabled>Seleccione</option>
+                      <option value="1">112233 Proveedor</option>
+                      <option value="2">445566 Proveedor</option>
+                      <option value="3">778899 Proveedor</option>
+                    </select>
                   </div>
                   <div class="col col-md-8">
                     <label for="vat" class=" form-control-label">Nombre del Proveedor</label>
@@ -239,7 +263,13 @@
                 <div class="row form-group" id="div_row_info_vehiculo">
                   <div class="col col-md-4">
                     <label for="vat" class=" form-control-label">N° Económico</label>
-                    <input type="text" placeholder="N° Económico" class="form-control">
+                    <!--<input type="text" placeholder="N° Económico" class="form-control">-->
+                    <select class="select2 form-control" id="num_economico" style="width: 100%;">
+                      <option value="0" selected disabled>Seleccione</option>
+                      <option value="1">TR-A30</option>
+                      <option value="2">TR-B20</option>
+                      <option value="3">TR-C10</option>
+                    </select>
                   </div>
                   <div class="col col-md-4">
                     <label for="vat" class=" form-control-label">Tipo de Vehiculo</label>
@@ -253,7 +283,13 @@
                 <div class="row form-group" id="div_row_nom_chofer">
                   <div class="col col-md-12">
                     <label for="vat" class=" form-control-label">Nombre del Chofer</label>
-                    <input type="text" placeholder="N° Económico" class="form-control">
+                    <!--<input type="text" placeholder="N° Económico" class="form-control">-->
+                    <select class="select2 form-control" id="nombre_chofer" style="width: 100%;">
+                      <option value="0" selected disabled>Seleccione</option>
+                      <option value="1">Alejandro de Jesus Avalos Medina</option>
+                      <option value="2">Pablo Alberto Barocio Valle</option>
+                      <option value="3">Edgar Emanuel Franco Garibay</option>
+                    </select>
                   </div>
                 </div>
                 <div>

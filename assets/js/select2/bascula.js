@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+  $("#select_num_documento").hide();
   $("#div_row_cliente").hide();
   $("#div_row_proveedor").hide();
   $("#div_row_proveedor").hide();
@@ -52,7 +53,11 @@ function mov(){
 function con_mov(){   
     jQuery(document).ready(function($){
         $id_select_concepto_mov=$("#concepto_movimiento").select2('val');
+        //$id_tipo_de_documento=$("#tipo_de_documento").select2('val');
+        //
         if ($id_select_concepto_mov == 3) {
+            $("#input_num_documento").hide();
+            $("#select_num_documento").show();
           var sampleArray = [
             {id:0,text:'Orden de Compra'},
             {id:1,text:'Remision'},
@@ -65,6 +70,8 @@ function con_mov(){
           $("#tipo_de_documento").val('2');
           $('#tipo_de_documento').trigger('change');
       }else{
+        $("#input_num_documento").show();
+        $("#select_num_documento").hide();
         $("#tipo_de_documento").empty().trigger('change')
           var sampleArray = [
                       {id:0,text:'Orden de Compra'},
