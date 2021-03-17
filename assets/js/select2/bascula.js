@@ -33,6 +33,7 @@ function mov(){
             $("#div_row_info_vehiculo").show();
             $("#div_row_nom_chofer").show();
         }else if($id_select_tipo_mov == 2){
+          
             $("#div_row_proveedor").hide();
             $("#div_row_cliente").show();
             var sampleArray = [
